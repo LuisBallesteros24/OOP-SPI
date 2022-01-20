@@ -5,28 +5,24 @@ class Shape(ABC):
         self._color = color
         self._filled = filled
     
-    @abstractmethod
-    def shape(self):
-        pass
-
-    def get_color(self):
+    def getColor(self):
         return self._color
 
-    def set_color(self, color : str):
+    def setColor(self, color : str):
         self._color = color
 
-    def get_filled(self):
+    def getFilled(self):
         return self._filled
 
-    def set_filled(self, filled : bool):
+    def setFilled(self, filled : bool):
         self._filled = filled
 
     @abstractmethod
-    def get_area():
+    def getArea():
         pass
 
     @abstractmethod
-    def get_perimeter():
+    def getPerimeter():
         pass
 
     @abstractmethod

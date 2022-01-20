@@ -6,23 +6,18 @@ class Circle(Shape):
         Shape.__init__(self, color, filled)
         self._radius = radius
     
-    def get_radius(self):
+    def getRadius(self):
         return self._radius
 
-    def set_radius(self, radius : float):
+    def setRadius(self, radius : float):
         self._radius = radius
 
 
-    def get_area(self):
-        return pi*(self._radius**2)
+    def getArea(self):
+        return pi*(self.getRadius()**2)
 
-    def get_perimeter(self):
-        return 2*pi*self._radius
+    def getPerimeter(self):
+        return 2*pi*self.getRadius()
 
     def __str__(self):
-        if (self._filled):
-            print ("the rectangle is color ", self._color, 
-            "is filled and has a radius of ", self._radius )
-        else:
-            print("the rectangle is color ", self._color, 
-            "is not filled and has a radius of ", self._radius )
+        return "Circle[Shape[color="+self.getColor()+",filled="+str(self.getFilled())+"],radius="+str(self.getRadius())+"]"

@@ -6,28 +6,23 @@ class Rectangle(Shape):
         self._width = width
         self._length = length
     
-    def get_width(self):
+    def getWidth(self):
         return self._width
 
-    def set_width(self, width : float):
+    def setWidth(self, width : float):
         self._width = width
     
-    def get_length(self):
+    def getLength(self):
         return self._length
 
-    def set_length(self, length : float):
+    def setLength(self, length : float):
         self._length = length
 
-    def get_area(self):
-        return self._length*self._width
+    def getArea(self):
+        return self.getLength()*self.getWidth()
 
-    def get_perimeter(self):
-        return 2*self._length+2*self._width
+    def getPerimeter(self):
+        return 2*self.getLength()+2*self.getWidth()
     
     def __str__(self):
-        if (self._filled):
-            print ("the rectangle is color ", self._color, 
-            "is filled and has a width and lenght of ", self._width, self._length )
-        else:
-            print("the rectangle is color ", self._color, 
-            "is not filled and has a width and lenght of ", self._width, self._length)
+        return "Rectangle[Shape[color="+self.getColor()+",filled="+str(self.getFilled())+"],width="+str(self.getWidth())+",length="+str(self.getLength)+"]"
